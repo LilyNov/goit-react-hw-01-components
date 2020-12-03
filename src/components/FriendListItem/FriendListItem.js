@@ -5,14 +5,16 @@ import s from '../FriendListItem/FriendListItem.module.css';
 export default function FriendsListItem({ status, avatar, name }) {
   return (
     <>
-      <span
-        className={s.status}
-        style={{ backgroundColor: status ? 'green' : 'red' }}
-      >
-        {status}
-      </span>
-      <img className={s.avatar} src={avatar} alt={name} width="48" />
-      <p className={s.name}>{name}</p>
+      <li className={s.item}>
+        <span
+          className={s.status}
+          style={{ backgroundColor: status ? 'green' : 'red' }}
+        >
+          {status}
+        </span>
+        <img className={s.avatar} src={avatar} alt={name} width="48" />
+        <p className={s.name}>{name}</p>
+      </li>
     </>
   );
 }
